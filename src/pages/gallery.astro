@@ -1,7 +1,152 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import PictureCard from "../components/Picturecard.astro";
 ---
 
-<MainLayout title="Titel">
-  <main class="container mx-auto p-4"></main>
+<MainLayout title="Gallery">
+  <main class="mt-50">
+    <section class="relative max-w-4xl mx-auto">
+      <img
+        src="/graphicelements/paperbgwinner.webp"
+        alt="paper background"
+        class="w-full h-auto"
+      />
+
+      <div
+        class="absolute top-0 left-0 w-full h-full flex flex-col justify-center p-8 r"
+      >
+        <Heading
+          htmlheading="h1"
+          size="large"
+          color="red"
+          font="display"
+          class="mb-4"
+        >
+          Winners and Nominees
+        </Heading>
+
+        <Text>
+          Instant Day was quite a success with more than X contributions. So it
+          was difficult to find a winner. After a couple of long but exciting
+          days, the judges agreed on the winner and the X nominees.
+        </Text>
+      </div>
+    </section>
+
+    <section
+      class="grid lg:grid-cols-2 gap-6 my-20 mx-10 md:mx-30 items-center text-center lg:text-left"
+    >
+      <div class="row-span-4 flex justify-center lg:justify-end">
+        <img src="/img/01-amager-faelled.webp" alt="Amager fælled" />
+      </div>
+
+      <div
+        class="flex flex-col gap-2 items-center lg:items-start row-span-1 lg:flex-row lg:gap-4"
+      >
+        <img
+          class="w-28 hidden lg:block"
+          src="/graphicelements/arrow.webp"
+          alt="Arrow"
+        />
+        <Heading htmlheading="h2" size="medium" font="display" color="red">
+          Winner
+        </Heading>
+      </div>
+
+      <div class="lg:flex lg:flex-col gap-2 row-span-2">
+        <Heading htmlheading="h3" size="small" weight="bold">
+          Amager Fælled
+        </Heading>
+        <Text teksttype="maintext" weight="bold">Stefan Grage</Text>
+        <Text teksttype="maintext">
+          A little snap from Amager Fælled, a large common in the southwestern
+          part of Copenhagen, Denmark. Taken with a Lomomatic Square.
+        </Text>
+      </div>
+    </section>
+
+    <section class="text-center lg:text-left mx-10 lg:mx-40">
+      <div class="mb-10">
+        <Heading htmlheading="h2" size="medium" font="display" color="red"
+          >Best of 2025 - nominees</Heading
+        >
+      </div>
+
+      <div
+        class="grid grid-cols-[repeat(auto-fit,minmax(150px,300px))] gap-10 justify-center"
+      >
+        <PictureCard
+          imageSrc="/img/03-amager-strand_resultat.webp"
+          title="Amager Strand"
+          subtitle="Stefan Grage"
+          text="From this angle, Copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter."
+        />
+
+        <PictureCard
+          imageSrc="/img/04-burger-king.webp"
+          title="Hands off my happy meal!"
+          subtitle="Stefan Grage"
+          text="A casual snap from Burger King. The youngest kid didn’t want to share his happy meal. Taken with an Instax Mini."
+        />
+
+        <PictureCard
+          imageSrc="/img/05-dobbelt-exp-orestad_resultat.webp"
+          title="2 x Ørestad"
+          subtitle="Stefan Grage"
+          text="A double exposure from my neighbourhood, Ørestad. Taken with a Lomomatic Square."
+        />
+
+        <PictureCard
+          imageSrc="/img/06-loserup-strand-04 1_resultat.webp"
+          title="Løserup Strand"
+          subtitle="Stefan Grage"
+          text="Too cold to take a dip. The polaroid had an awful magenta color cast, but I ended up liking it. Taken with a Polaroid Now+ gen 2 and an i-Type film."
+        />
+
+        <PictureCard
+          imageSrc="/img/07-orestad-sort-hvid_resultat.webp"
+          title="New meets old"
+          subtitle="Stefan Grage"
+          text="I wanted to catch the new city development district, Ørestad, in a shade of old school. Used a Polaroid Now+ gen 2 in tripod mode with i-Type black & white film."
+        />
+
+        <PictureCard
+          imageSrc="/img/08-karlstrup_kalkgrav_kaffe_08-2025_resultat.webp"
+          title="Karlstrup & coffee"
+          subtitle="Stefan Grage"
+          text="The scenic beauty of a former lime pit with a twist of coffee: The polaroid was soaked in coffee for a couple of weeks, giving it a nice tan. Polaroid Flip."
+        />
+
+        <PictureCard
+          imageSrc="/img/09-amager-strand-nat_resultat.webp"
+          title="Amager Strand at night"
+          subtitle="Stefan Grage"
+          text="Amager Strand, Copenhagen. Locally referred to as Copenhagen’s mini-manhattan. Long exposure, Polaroid Now+ gen 2 in manual mode with i-Type color film."
+        />
+
+        <PictureCard
+          imageSrc="/img/10-amager-strand-vandbad 1_resultat.webp"
+          title="Close to the sea"
+          subtitle="Stefan Grage"
+          text="Amager Strand is close to the sea. I wanted to give this polaroid a twist of water: The polaroid soaked for around three weeks in water. Used Polaroid Now+ gen 2."
+        />
+
+        <PictureCard
+          imageSrc="/img/11-instax-mikro-1 2_resultat.webp"
+          title="Micro adventure 2"
+          subtitle="Stefan Grage"
+          text="The beach at my summer house in Løserup. Expired instax mini film. I microwaved it. I should have studied how to microwave an instant image: It caught fire in the oven."
+        />
+
+        <PictureCard
+          imageSrc="/img/13-amerikaplads_nordhavnen_expired_film_aug_25.jpg_resultat.webp"
+          title="Nordhavn at night"
+          subtitle="Stefan Grage"
+          text="Nordhavn, Copenhagen, at night. Long exposure with expired film. Used a Polaroid Flip in manual mode with i-Type film for long exposure."
+        />
+      </div>
+    </section>
+  </main>
 </MainLayout>

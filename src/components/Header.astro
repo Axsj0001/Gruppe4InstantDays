@@ -1,93 +1,129 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1); // remove the first "/"
+const currentPath = pathname.slice(1); // fjerner det første "/"
 ---
 
-<header x-data="{ showmenu: false }" class="">
+<header
+  x-data="{ showmenu: false }"
+  class="fixed top-0 left-0 w-full z-50 bg-[url('/graphicelements/headerimg.webp')] bg-cover bg-[center_80%] pb-10"
+>
   <div
     id="navbar"
     class="container mx-auto p-4 flex flex-row justify-between items-center"
   >
-    <nav id="desktopmenu" class="hidden lg:block">
-      <ul class="flex flex-row gap-4">
-        <li class="uppercase">
+    <!-- Desktop menu -->
+    <nav
+      id="desktopmenu"
+      class="hidden lg:flex items-center justify-between w-full"
+    >
+      <!-- Venstre menu -->
+      <ul class="flex gap-30">
+        <li class="uppercase text-[20px] font-bold">
           <a
-            href="index.astro"
-            class={currentPath === "" ? "text-[20px] font-bold" : ""}>Home</a
+            href="/"
+            class={`hover:text-[var(--color-red)] transition-colors duration-300 ${currentPath === "" ? "text-[var(--color-red)]" : ""}`}
           >
-        </li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
-        <li class="uppercase">
+            Home
+          </a>
+        </li>
+        <li class="uppercase text-[20px] font-bold">
           <a
-            href="submit.astro"
-            class={currentPath === "" ? "text-[20px] font-bold" : ""}>Submit</a
+            href="/submit/"
+            class={`hover:text-[var(--color-red)] transition-colors duration-300 ${currentPath === "submit/" ? "text-[var(--color-red)]" : ""}`}
           >
+            Submit
+          </a>
         </li>
       </ul>
 
-      <div id="logo" class="">
-        <a href="index.html">
+      <!-- Logo -->
+      <div id="logo" class="mx-4">
+        <a href="/">
           <img
-            src="grafic/logo.png"
-            alt="Astrotalewind Logo"
-            style="height: 80px;"
+            src="/graphicelements/logo_resultat.webp"
+            alt="Instantday Logo"
+            class="h-20"
           />
         </a>
       </div>
 
-      <ul class="flex flex-row gap-4">
-        <li class="uppercase">
+      <!-- Højre menu -->
+      <ul class="flex gap-30">
+        <li class="uppercase text-[20px] font-bold">
           <a
-            href="gallery.astro"
-            class={currentPath === "" ? "text-[20px] font-bold" : ""}>Gallery</a
+            href="/gallery/"
+            class={`hover:text-[var(--color-red)] transition-colors duration-300 ${currentPath === "gallery/" ? "text-[var(--color-red)]" : ""}`}
           >
-        </li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
-        <li class="uppercase">
+            Gallery
+          </a>
+        </li>
+        <li class="uppercase text-[20px] font-bold">
           <a
-            href="info.astro"
-            class={currentPath === "" ? "text-[20px] font-bold" : ""}
-            >About Us</a
+            href="/info/"
+            class={`hover:text-[var(--color-red)] transition-colors duration-300 ${currentPath === "info/" ? "text-[var(--color-red)]" : ""}`}
           >
+            About Us
+          </a>
         </li>
       </ul>
     </nav>
 
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
-      ><svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="size-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-      </svg>
+    <!-- Mobil menu -->
+    <div id="logo" class="mx-4 lg:hidden">
+      <a href="/">
+        <img
+          src="/graphicelements/logo_resultat.webp"
+          alt="Instantday Logo"
+          class="h-20"
+        />
+      </a>
+    </div>
+
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu">
+      <img src="/graphicelements/burgermenu.webp" alt="Menu" class="h-8 w-12" />
     </button>
   </div>
+
+  <!-- Mobilmenu dropdown -->
   <nav
     id="mobilmenu"
-    class="flex flex-col content-center"
+    class="flex flex-col content-center bg-[var(--color-menu)]"
     x-show="showmenu"
-    x-transition
     x-on:click="showmenu = false"
     x-on:click.outside="showmenu = false"
   >
-    <ul class="border-t-2 border-b-2 border-black">
-      <li class="text-center py-2">
-        <a href="/" class={currentPath === "" ? "italic font-bold" : "italic"}
-          >Forside</a
-        >
-      </li>
-      <li class="text-center py-2">
+    <ul class="border-t-2 border-[var(--color-red)]">
+      <li class="text-center py-5 border-b-2 border-[var(--color-red)]">
         <a
-          href="/komponentbibliotek/"
-          class={currentPath === "komponentbibliotek/"
-            ? "italic font-bold"
-            : "italic"}>Komponentbibliotek</a
+          href="/"
+          class={`font-bold uppercase hover:text-[var(--color-red)] transition-colors duration-300 ${currentPath === "" ? "text-[var(--color-red)]" : ""}`}
         >
+          Home
+        </a>
+      </li>
+      <li class="text-center py-5 border-b-2 border-[var(--color-red)]">
+        <a
+          href="/submit/"
+          class={`font-bold uppercase hover:text-[var(--color-red)] transition-colors duration-300 ${currentPath === "submit/" ? "text-[var(--color-red)]" : ""}`}
+        >
+          Submit
+        </a>
+      </li>
+      <li class="text-center py-5 border-b-2 border-[var(--color-red)]">
+        <a
+          href="/gallery/"
+          class={`font-bold uppercase hover:text-[var(--color-red)] transition-colors duration-300 ${currentPath === "gallery/" ? "text-[var(--color-red)]" : ""}`}
+        >
+          Gallery
+        </a>
+      </li>
+      <li class="text-center py-5 border-b-2 border-[var(--color-red)]">
+        <a
+          href="/info/"
+          class={`font-bold uppercase hover:text-[var(--color-red)] transition-colors duration-300 ${currentPath === "info/" ? "text-[var(--color-red)]" : ""}`}
+        >
+          About Us
+        </a>
       </li>
     </ul>
   </nav>

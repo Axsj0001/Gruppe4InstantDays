@@ -1,0 +1,32 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+
+const { imageSrc, title, subtitle, text } = Astro.props;
+---
+
+<div class="relative group overflow-hidden">
+  <img
+    src={imageSrc}
+    alt={title}
+    class="w-full h-full object-cover transition-transform duration-300"
+  />
+
+  <!-- hover -->
+  <div
+    class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-70 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-10 gap-4"
+  >
+    <Heading
+      htmlheading="h4"
+      size="small"
+      color="main"
+      class="text-xl font-bold mb-2">{title}</Heading
+    >
+    <Text teksttype="smalltext" weight="bold" color="main">{subtitle}</Text>
+    <Text
+      teksttype="smalltext"
+      color="main"
+      class="text-[var(--color-main)] text-sm">{text}</Text
+    >
+  </div>
+</div>
