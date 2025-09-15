@@ -1,0 +1,47 @@
+---
+import Heading from '../components/Heading.astro';
+import Text from '../components/Text.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import Button from '../components/Button.astro';
+---
+<MainLayout title="Thank You">
+  <div class="min-h-screen flex items-center justify-center bg-[var(--color-main)] p-8">
+    <div class="bg-[url('/public/img/paperupload2_resultat.webp')] bg-cover bg-center bg-no-repeat rounded-lg p-8 w-full max-w-xl flex flex-col items-center justify-center space-y-6 text-center">
+      
+      <Heading htmlheading="h1" size="large" weight="bold" font="display" color="red">
+        Thanks!
+      </Heading>
+
+      <Text teksttype="brødtekst" weight="regular">
+        You’re an instant champ!
+      </Text>
+
+      <Text teksttype="brødtekst" weight="regular">
+        Thanks for the contribution.
+      </Text>
+
+      <Text teksttype="brødtekst" weight="regular">
+        The competition runs until October 18. Shortly after, we will review all the images, and announce a winner on October 31.
+      </Text>
+
+      <Text teksttype="brødtekst" weight="regular">
+        If you are one of the lucky winners or nominees, we will contact you by e-mail.
+      </Text>
+
+      <Text teksttype="brødtekst" weight="regular">
+        Good luck!
+      </Text>
+
+      <Text teksttype="brødtekst" weight="bold">
+        NB! Want to make one more submission? 
+      </Text>
+
+      <div class="flex justify-center">
+        <Button variant="primary" size="medium" as="a" href="/submit">
+          Submit more
+        </Button>
+      </div>
+
+    </div>
+  </div>
+</MainLayout>
