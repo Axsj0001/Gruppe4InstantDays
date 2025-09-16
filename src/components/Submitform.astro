@@ -3,11 +3,21 @@ import Heading from './Heading.astro';
 import Text from './Text.astro';
 import Button from './Button.astro';
 ---
-<form 
-  class="bg-[url('/public/img/paperupload2_resultat.webp')] bg-cover bg-center bg-no-repeat rounded-lg p-8 w-full max-w-xl space-y-6 mx-auto"
-  method="get"
-  action="/thankyou"
->
+<section class="relative max-w-xl mx-auto">
+ 
+  <img 
+    src="/public/img/paperupload2_resultat.webp" 
+    alt="background paper"
+    class="w-full h-auto"
+  />
+
+  
+  <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center p-8">
+    <form 
+      class="p-6 w-full space-y-6"
+      method="get"
+      action="/thankyou"
+    >
 
 
   <Heading 
@@ -81,3 +91,4 @@ import Button from './Button.astro';
   </div>
 
 </form>
+</section>

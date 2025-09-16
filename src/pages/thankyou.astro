@@ -5,16 +5,24 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Button from '../components/Button.astro';
 ---
 <MainLayout title="Thank You">
-  <div class="min-h-screen flex items-center justify-center bg-[var(--color-main)] p-8">
-    <div class="bg-[url('/public/img/paperupload2_resultat.webp')] bg-cover bg-center bg-no-repeat rounded-lg p-8 w-full max-w-xl flex flex-col items-center justify-center space-y-6 text-center">
-      
-      <Heading htmlheading="h1" size="large" weight="bold" font="display" color="red">
-        Thanks!
-      </Heading>
 
-      <Text teksttype="brødtekst" weight="regular">
-        You’re an instant champ!
-      </Text>
+  <div class="flex justify-center bg-[var(--color-main)] p-8 pt-50">
+    <section class="relative w-full max-w-xl">
+      <img 
+        src="/public/img/paper_submit_short_1.webp" 
+        alt="background paper" 
+        class="w-full h-auto object-cover rounded-lg"
+      />
+
+      <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center p-8 space-y-6 text-center">
+
+        <Heading htmlheading="h1" size="large" weight="bold" font="display" color="red">
+          Thanks!
+        </Heading>
+
+        <Text teksttype="brødtekst" weight="regular">
+          You are an instant champ!
+        </Text>
 
       <Text teksttype="brødtekst" weight="regular">
         Thanks for the contribution.
