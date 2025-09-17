@@ -6,51 +6,100 @@ import Heading from "../components/Heading.astro";
 
 <MainLayout title="Titel">
   <main class="container mx-auto p-4 mt-40">
-    <div>
-      <Heading htmlheading="h1" size="large" font="display" color="red">Who are We</Heading>
-    </div>
-    <div>
-      <Text teksttype="maintext">Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme at EK - Business Academy Copenhagen. Instant Day is a bi-annual project where lecturers and students collaborate on a digital design and communication project related to the Instant Day competition (this website). In essence, we just want to promote instant photography and have fun while doing it. Cheers.</Text>
-    </div>
-    <div class="columns-2 pl-5">
-      <img src="/public/img/Group 24_resultat.webp" alt="billede af lærer" />
-      <img src="/public/img/Group 25_resultat.webp" alt="billede af lærer 2" />
-    </div>
-    <div class="columns-2 pl-5">
-      <img src="/public/img/Group 22_resultat.webp" alt="billede af lærer" />
-      <img src="/public/img/Group 23_resultat.webp" alt="billede af lærer 2" />
-    </div>
-    <div class="columns-2">
-      <Heading htmlheading="h1" size="large" font="display" color="red">The judges</Heading>
-      <img class="w-20" src="/public/graphicelements/ligthbulb_resultat.webp" alt="Lightbulb" />
-    </div>
-    <div class="mt-2">
-      <Text teksttype="maintext">Submissions will be reviewed by:</Text>
-    </div>
-    <div class="columns-2 mt-20">
-      <img class="w-10 ml-20 mt-7" src="/public/graphicelements/star_resultat.webp" alt="star" />
-      <Text teksttype="maintext" class="pl-3 mr-12">Jonas Hasle (Assistant lecturer, Multimedia Design programme at EK)</Text>
-    </div>
-    <div class="columns-2 mt-10">
-      <img class="w-10 ml-20 mt-7" src="/public/graphicelements/star_resultat.webp" alt="star" />
-      <Text teksttype="maintext" class="pl-3 mr-12">Anders Dollerup (Associate lecturer, Multimedia Design programme at EK)</Text>
-    </div>
-    <div class="columns-2 mt-10">
-      <img class="w-10 ml-20 mt-7" src="/public/graphicelements/star_resultat.webp" alt="star" />
-      <Text teksttype="maintext" class="pl-3 mr-12">Birgitte Heide (Associate lecturer, Multimedia Design programme at EK)</Text>
-    </div>
-    <div class="columns-2 mt-10">
-      <img class="w-10 ml-20 mt-7" src="/public/graphicelements/star_resultat.webp" alt="star" />
-      <Text teksttype="maintext" class="pl-3 mr-12">Stefan Grage (Associate lecturer, Multimedia Design programme at EK)</Text>
-    </div>
-    <div class="columns-2 mt-10">
-      <img class="w-10 ml-20 mt-7" src="/public/graphicelements/star_resultat.webp" alt="star" />
-      <Text teksttype="maintext" class="pl-3 mr-5">Students on the Digital Design Elective on the Multimedia Design programme at KEA)</Text>
+    <div class="flex flex-col">
+      <div class="order-2 lg:order-1 w-full">
+        <div class="pt-20 absolute left-0">
+          <img src="/graphicelements/whoareweline_resultat.webp" alt="" />
+        </div>
+        <div class="mt-20">
+          <div class="columns-2 pl-5 relative lg:columns-4">
+            <img src="/img/Group 24_resultat.webp" alt="billede af lærer" />
+            <img src="/img/Group 25_resultat.webp" alt="billede af lærer 2" />
+            <div class="hidden lg:block">
+              <img src="/img/Group 22_resultat.webp" alt="billede af lærer" />
+              <img src="/img/Group 23_resultat.webp" alt="billede af lærer 2" />
+            </div>
+          </div>
+          <div class="absolute left-0 lg:hidden">
+            <img src="/graphicelements/whoareweline_resultat.webp" alt="" />
+          </div>
+          <div class="columns-2 pl-5 relative mb-10 lg:hidden">
+            <img src="/img/Group 22_resultat.webp" alt="billede af lærer" />
+            <img src="/img/Group 23_resultat.webp" alt="billede af lærer 2" />
+          </div>
+        </div>
+        <div class="absolute hidden lg:flex lg:ml-150 lg:mt-160 lg:pr-20">
+          <img src="/graphicelements/thejudgesline_resultat.webp" alt="" />
+        </div>
+      </div>
+
+      <div class="order-1 lg:order-2 w-full">
+        <div class="absolute w-125 left-0 lg:w-300">
+          <img src="/img/rm434-007-removebg-preview 1_resultat.webp" alt="" />
+        </div>
+        <div class="relative text-center pr-15 mt-7 lg:text-left lg:mt-35">
+          <div class="pl-10 lg:pl-0">
+            <Heading htmlheading="h1" size="large" font="display" color="red">Who are we</Heading>
+          </div>
+          <div class="pr-10 pl-20 lg:pl-0 lg:pr-130">
+            <Text teksttype="maintext">Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme at EK - Business Academy Copenhagen.<br /> <br /> Instant Day is a bi-annual project where lecturers and students collaborate on a digital design and communication project related to the Instant Day competition (this website). In essence, we just want to promote instant photography and have fun while doing it. Cheers.</Text>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="bg-red-50 border-5 mt-20">
-      <Heading htmlheading="h1" size="large" font="display" color="red">Sponsors</Heading>
-      <Text teksttype="maintext" class="text-center mr-20 ml-20">Instant Day is not affiliated to any companies within the Instant Photography industry. The only organisation backing us is EK - Business Academy Copenhagen. At least so far.</Text>
+    <div class="flex flex-row gap-2 items-center row-span-1 self-center w-full justify-center lg:pl-90 lg:mt-55">
+      <div class="">
+        <Heading htmlheading="h1" size="large" font="display" color="red">The judges</Heading>
+      </div>
+      <div>
+        <img class="w-20 lg:absolute lg:w-50 lg:-mt-35" src="/graphicelements/ligthbulb_resultat.webp" alt="Lightbulb" />
+      </div>
+    </div>
+    <div class="flex flex-row gap-2 items-center row-span-1 self-center w-full justify-center mt-5 lg:pl-120">
+      <Text teksttype="maintext">Submissions will be reviewed by:</Text>
+    </div>
+
+    <div class="pl-15 pr-15 lg:pl-150 lg:pr-30 lg:ml-20">
+      <div class="flex flex-col items-center lg:items-start mt-10 space-y-6">
+        <div class="flex items-center gap-3">
+          <img class="w-10" src="/graphicelements/star_resultat.webp" alt="star" />
+          <Text teksttype="maintext">Jonas Hasle (Assistant lecturer, Multimedia Design programme at EK)</Text>
+        </div>
+        <div class="flex items-center gap-3">
+          <img class="w-10" src="/graphicelements/star_resultat.webp" alt="star" />
+          <Text teksttype="maintext">Anders Dollerup (Associate lecturer, Multimedia Design programme at EK)</Text>
+        </div>
+        <div class="flex items-center gap-3">
+          <img class="w-10" src="/graphicelements/star_resultat.webp" alt="star" />
+          <Text teksttype="maintext">Birgitte Heide (Associate lecturer, Multimedia Design programme at EK)</Text>
+        </div>
+        <div class="flex items-center gap-3">
+          <img class="w-10" src="/graphicelements/star_resultat.webp" alt="star" />
+          <Text teksttype="maintext">Stefan Grage (Associate lecturer, Multimedia Design programme at EK)</Text>
+        </div>
+        <div class="flex items-center gap-3">
+          <img class="w-10" src="/graphicelements/star_resultat.webp" alt="star" />
+          <Text teksttype="maintext">Students on the Digital Design Elective on the Multimedia Design programme at KEA</Text>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative ml-20 mt-10 lg:ml-1">
+      <div class="w-80 lg:w-110">
+        <img src="/graphicelements/compressed_polaroid_note.webp" alt="" />
+      </div>
+      <div class="absolute top-0 left-10 w-60 lg:ml-10 lg:left-1">
+        <div class="text-center mt-15 lg:mt-5 lg:text-left">
+          <Heading htmlheading="h1" size="large" font="display" color="red">Sponsors</Heading>
+        </div>
+        <div class="text-center mt-2 lg:text-left">
+          <Text teksttype="maintext" class="text-center mr-20 ml-20">Instant Day is not affiliated to any companies within the Instant Photography industry. The only organisation backing us is EK - Business Academy Copenhagen. At least so far.</Text>
+        </div>
+        <div class="w-40 ml-10 mt-5 border-2 rounded-full lg:ml-47 lg:relative lg:-mt-3" style=" --tw-border-opacity: 1; border-color: var(--color-main);">
+          <img src="/graphicelements/eklogo_resultat.webp" alt="" />
+        </div>
+      </div>
     </div>
   </main></MainLayout
 >
