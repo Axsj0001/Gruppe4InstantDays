@@ -1,22 +1,29 @@
 ---
-import Heading from '../components/Heading.astro';
-import Text from '../components/Text.astro';
-import MainLayout from '../layouts/MainLayout.astro';
-import Button from '../components/Button.astro';
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
 ---
-<MainLayout title="Thank You">
 
+<MainLayout title="Thank You">
   <div class="flex justify-center bg-[var(--color-main)] p-8 pt-50">
     <section class="relative w-full max-w-xl">
-      <img 
-        src="/public/img/paper_submit_short_1.webp" 
-        alt="background paper" 
+      <img
+        src="/img/paper_submit_short_1.webp"
+        alt="background paper"
         class="w-full h-auto object-cover rounded-lg"
       />
 
-      <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center p-8 space-y-6 text-center">
-
-        <Heading htmlheading="h1" size="large" weight="bold" font="display" color="red">
+      <div
+        class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center p-8 space-y-6 text-center"
+      >
+        <Heading
+          htmlheading="h1"
+          size="large"
+          weight="bold"
+          font="display"
+          color="red"
+        >
           Thanks!
         </Heading>
 
@@ -24,34 +31,32 @@ import Button from '../components/Button.astro';
           You are an instant champ!
         </Text>
 
-      <Text teksttype="brødtekst" weight="regular">
-        Thanks for the contribution.
-      </Text>
+        <Text teksttype="brødtekst" weight="regular">
+          Thanks for the contribution.
+        </Text>
 
-      <Text teksttype="brødtekst" weight="regular">
-        The competition runs until October 18. Shortly after, we will review all the images, and announce a winner on October 31.
-      </Text>
+        <Text teksttype="brødtekst" weight="regular">
+          The competition runs until October 18. Shortly after, we will review
+          all the images, and announce a winner on October 31.
+        </Text>
 
-      <Text teksttype="brødtekst" weight="regular">
-        If you are one of the lucky winners or nominees, we will contact you by e-mail.
-      </Text>
+        <Text teksttype="brødtekst" weight="regular">
+          If you are one of the lucky winners or nominees, we will contact you
+          by e-mail.
+        </Text>
 
-      <Text teksttype="brødtekst" weight="regular">
-        Good luck!
-      </Text>
+        <Text teksttype="brødtekst" weight="regular"> Good luck! </Text>
 
-      <Text teksttype="brødtekst" weight="bold">
-        NB! Want to make one more submission? 
-      </Text>
+        <Text teksttype="brødtekst" weight="bold">
+          NB! Want to make one more submission?
+        </Text>
 
-     <div class="flex justify-center">
-  <a href="/submit" class="inline-block">
-    <Button variant="primary" size="medium">
-      Submit more
-    </Button>
-  </a>
-</div>
-
-    </div>
+        <div class="flex justify-center">
+          <a href="/submit" class="inline-block">
+            <Button variant="primary" size="medium"> Submit more </Button>
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
 </MainLayout>
