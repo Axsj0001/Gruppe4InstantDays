@@ -1,0 +1,220 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+import Button from "./Button.astro";
+import { Image } from "astro:assets";
+---
+
+<section class="container mx-auto bg-gray-50 mb-8 py-12 px-4 md:py-20">
+    <div class="max-w-5xl mx-auto mb-10 text-center md:text-left md:pl-10 md:mb-10">
+        <!-- Headline -->
+        <Heading htmlheading="h1" size="large" weight="bold" font="display" color="red">
+            How to participate
+        </Heading>
+        <!-- Sub-headline -->
+        <Text teksttype="maintext" class="text-left">
+            So: Got an instant photo ready for the public?<br />
+			In order to take part in Instant Day:
+        </Text>
+    </div>
+        
+    <!-- Container -->
+    <div class="container mx-auto mt-6 grid grid-cols-1 gap-10 md:gap-0 md:justify-items-center">
+        
+		<!-- Step 1 -->
+		<div class="w-full relative md:w-200 md:right-0 lg:w-200 lg:right-50">
+			<div class="w-full h-full  absolute top-8 left-35 items-center text-center md:top-10 md:left-10 lg:left-50">
+				<Heading htmlheading="h2" size="large" weight="bold" font="display" color="red">
+					1.
+				</Heading>
+			</div>
+			<div class="w-full h-full flex flex-col absolute justify-center text-center px-15 md:text-left md:-left-20 md:px-50 lg:px-35 lg:left-10">	
+				<Text teksttype="maintext" class="">
+					Take a photo of your instant with your smartphone (or scan it for
+			    	max. quality) – the file should be between 2 – 10 MB, in jpg/jpeg or
+			    	webp format.
+				</Text>
+			</div>
+			<img src="/public/graphicelements/mobilephoto_resultat.webp" alt="phone" class="absolute -top-2 left-8 w-14 scale-140 md:top-30 md:left-160 md:scale-200 lg:left-220 lg:scale-240"/>
+			<img src="/public/graphicelements/line1_resultat.webp" alt="Line1" srcset="" class="w-full h-full place-content-start md:w-150 lg:w-250"/>
+		</div>
+
+		<!-- Step 2 -->
+		<div class="w-85 left-8 relative md:w-150 md:left-70 lg:w-170 lg:left-80">
+			<div class="w-full h-full flex flex-col absolute top-10 right-25 items-center text-left md:top-6 md:right-50 lg:top-8 lg:right-60">
+				<Heading htmlheading="h2" size="large" weight="bold" font="display" color="red">
+					2.
+				</Heading>
+			</div>
+			<div class="w-full h-full flex flex-col absolute justify-center items-center text-center px-25 md:px-50 md:top-4 md:right-20 md:text-left lg:px-50">	
+				<Text teksttype="maintext" class="">
+					Upload your photo and credentials on LINK.
+				</Text>
+			</div>
+			<img src="/public/graphicelements/uploadcontact_resultat.webp" alt="phone" class="absolute -top-4 -right-4 w-16 scale-160 md:top-20 md:right-160 md:scale-200 lg:-left-30"/>
+			<img src="/public/graphicelements/line2_resultat.webp" alt="Line1" srcset="" class="w-full h-full place-content-start md:w-90 lg:w-120"/>
+		</div>
+
+		<!-- Step 3 -->
+		<div class="w-full h-80 relative md:w-auto md:w-150 md:right-15 lg:-mt-10 lg:mb-20 lg:w-200 lg:right-40">
+			<div class="w-full h-full flex flex-col absolute top-14 right-32 items-center text-center md:right-40 lg:right-60">
+				<Heading htmlheading="h2" size="large" weight="bold" font="display" color="red">
+					3.
+				</Heading>
+			</div>
+			<div class="w-full h-full flex flex-col absolute justify-center items-center text-center px-15 md:top-4 md:right-0 md:text-left lg:px-20 lg:top-20 lg:-right-10">	
+				<Text teksttype="maintext" class="">
+					Agree to our terms and conditions LINK. <br><br>
+					The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest. 
+				</Text>
+			</div>
+			<img src="/public/graphicelements/tick_resultat.webp" alt="phone" class="absolute -top-2 left-50 w-14 scale-130 md:top-30 md:left-140 md:scale-200 lg:left-220 lg:scale-250"/>
+			<img src="/public/graphicelements/line3_resultat.webp" alt="Line1" srcset="" class="w-full h-full place-content-start md:w-130 lg:w-200 lg:h-100"/>
+		</div>
+
+		<!-- Step 4 -->
+		<div class="w-85 left-5 relative md:w-auto md:w-20 md:left-30 lg:mb-10">
+			<div class="w-full h-full flex flex-col absolute top-10 left-25 items-center text-center md:left-30 lg:top-16 lg:left-50">
+				<Heading htmlheading="h2" size="large" weight="bold" font="display" color="red">
+					4.
+				</Heading>
+			</div>
+			<div class="w-full h-full flex flex-col absolute justify-center items-center text-center top-4 px-10 md:top-5 md:text-left lg:px-20 lg:top-6">	
+				<Text teksttype="maintext" class="">
+					You can make up to 5 submissions - go through step 1-3 for each submission.
+				</Text>
+			</div>
+			<img src="/public/graphicelements/5pic_resultat.webp" alt="phone" class="absolute -top-4 -right-12 w-16 scale-160 -rotate-30 md:top-20 md:right-100 md:scale-160 lg:-left-30 lg:scale-200"/>
+			<img src="/public/graphicelements/line4_resultat.webp" alt="Line4" srcset="" class="w-full h-full place-content-start md:w-90 lg:w-140"/>
+		</div>
+
+		<!-- Button -->
+    	<div class="flex justify-center md:mt-12">
+			<div>
+			<Button variant="primary" size="medium" type="submit" weight="semibold">
+    		 	GO TO SUBMIT FORM
+    		</Button>
+    	</div>
+
+    </div>
+    
+    <div></div>
+    
+
+
+
+</section>
+
+
+
+			<!-- Step 1 -->
+			<!-- <div class="relative flex flex-col items-center text-center md:text-left bg-[url('/public/graphicelements/line1_resultat.webp')] bg-cover bg-center bg-no-repeat ">
+				<div class="absolute top-6 left-6 flex flex-col items-start">
+                    <Heading htmlheading="h1" size="large" weight="bold" font="display" color="red" class="mb-1">
+                        1.
+                    </Heading>
+					<Text class="text-gray-700 text-sm sm:text-base max-w-xs">
+						Take a photo of your instant with your smartphone (or scan it for
+						max. quality) – the file should be between 2 – 10 MB, in jpg/jpeg or
+						webp format.
+					</Text>
+				</div>
+
+				<img
+					src="/public/graphicelements/mobilephoto_resultat.webp"
+					alt="phone"
+					class="absolute -top-12 right-6 w-14"
+				/>
+			</div> -->
+
+			<!-- Step 2 -->
+			<!-- <div class="relative flex flex-col items-center text-center md:text-left">
+				<img src="/images/bubble2.png" alt="bubble" class="w-full max-w-md" />
+				<div class="absolute top-6 left-6 flex flex-col items-start">
+					<img src="/images/step2.png" alt="step 2" class="w-10 mb-4" />
+					<Text class="text-gray-700 text-sm sm:text-base max-w-xs">
+						Upload your photo and credentials on LINK.
+					</Text>
+				</div>
+				<img
+					src="/images/icon-contact.png"
+					alt="contact"
+					class="absolute -top-10 right-6 w-14"
+				/>
+			</div> -->
+
+			<!-- Step 3 -->
+			<!-- <div class="relative flex flex-col items-center text-center md:text-left">
+				<img src="/images/bubble3.png" alt="bubble" class="w-full max-w-md" />
+				<div class="absolute top-6 left-6 flex flex-col items-start">
+					<img src="/images/step3.png" alt="step 3" class="w-10 mb-4" />
+					<Text class="text-gray-700 text-sm sm:text-base max-w-xs">
+						Agree to our terms and conditions LINK.<br />
+						<br />
+						The short version: Participants have to be 18+, portrayed persons must
+						have given consent, and you agree that your instant can be exhibited
+						and used to promote the photo contest.
+					</Text>
+				</div>
+				<img
+					src="/images/icon-check.png"
+					alt="check"
+					class="absolute -top-10 left-6 w-14"
+				/>
+			</div> -->
+
+			<!-- Step 4 -->
+			<!-- <div class="relative flex flex-col items-center text-center md:text-left">
+				<img src="/images/bubble4.png" alt="bubble" class="w-full max-w-md" />
+				<div class="absolute top-6 left-6 flex flex-col items-start">
+					<img src="/images/step4.png" alt="step 4" class="w-10 mb-4" />
+					<Text class="text-gray-700 text-sm sm:text-base max-w-xs">
+						You can make up to 5 submissions – go through step 1–3 for each
+						submission.
+					</Text>
+				</div>
+				<img
+					src="/images/icon-dice.png"
+					alt="dice"
+					class="absolute -top-10 right-6 w-14"
+				/>
+			</div>
+		</div> -->
+
+		<!-- Button -->
+		<!-- <div class="mt-12 flex justify-center">
+			<button class="px-6 py-3 bg-red-600 text-white rounded font-semibold">
+				GO TO SUBMIT FORM
+			</button>
+		</div> -->
+
+
+
+
+		<!--------------------------- <div >
+            
+            <Text teksttype="maintext" class="text-center">
+                Upload your photo and credentials on LINK.
+            </Text>
+        </div>
+
+        <div>
+            
+            <Text teksttype="maintext" class="text-center text-gray-700 mt-3">
+                Agree to our terms and conditions LINK.<br />
+				<br />
+				The short version: Participants have to be 18+, portrayed persons must
+				have given consent, and you agree that your instant can be exhibited
+				and used to promote the photo contest.
+            </Text>
+        </div>
+
+        <div>
+            
+            <Text teksttype="maintext" class="text-center text-gray-700 mt-3">
+                You can make up to 5 submissions – go through step 1–3 for each
+				submission.
+            </Text>
+        </div> -->
+	</div>
+</section>
