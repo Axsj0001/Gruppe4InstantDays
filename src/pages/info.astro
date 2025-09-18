@@ -28,7 +28,9 @@ import Heading from "../components/Heading.astro";
             <img src="/img/Group 23_resultat.webp" alt="billede af lærer 2" />
           </div>
         </div>
-        <div class="absolute hidden xl:flex xl:ml-150 xl:mt-160 xl:pr-20">
+        <div
+          class="absolute hidden xl:flex xl:ml-150 xl:mt-160 xl:pr-20 intersect:animate-fade-up intersect:animate-duration[5000ms]"
+        >
           <img src="/graphicelements/thejudgesline_resultat.webp" alt="" />
         </div>
       </article>
@@ -61,7 +63,7 @@ import Heading from "../components/Heading.astro";
     </section>
 
     <section
-      class="flex flex-row gap-2 items-center row-span-1 self-center w-full justify-center mt-60 xl:pl-90 xl:mt-55"
+      class="flex flex-row gap-2 items-center row-span-1 self-center w-full justify-center mt-60 xl:pl-90 xl:mt-55 intersect:animate-fade-up intersect:animate-duration[5000ms]"
     >
       <div class="">
         <Heading htmlheading="h1" size="large" font="display" color="red"
@@ -77,12 +79,14 @@ import Heading from "../components/Heading.astro";
       </div>
     </section>
     <div
-      class="flex flex-row gap-2 items-center row-span-1 self-center w-full justify-center mt-5 xl:pl-120"
+      class="flex flex-row gap-2 items-center row-span-1 self-center w-full justify-center mt-5 xl:pl-120 intersect:animate-fade-up intersect:animate-duration[5000ms]"
     >
       <Text teksttype="maintext">Submissions will be reviewed by:</Text>
     </div>
 
-    <div class="pl-15 pr-15 mb-30 lg:pr-40 xl:pl-150 xl:pr-30 xl:ml-20">
+    <div
+      class="pl-15 pr-15 mb-30 lg:pr-40 xl:pl-150 xl:pr-30 xl:ml-20 intersect:animate-fade-up intersect:animate-duration[5000ms]"
+    >
       <div class="flex flex-col items-start mt-10 space-y-6">
         <div class="flex items-center gap-3">
           <img
@@ -141,7 +145,9 @@ import Heading from "../components/Heading.astro";
       </div>
     </div>
 
-    <section class="relative left-20 ml-0 mt-10 mb-30 lg:ml-1">
+    <section
+      class="relative left-20 ml-0 mt-10 mb-30 lg:ml-1 intersect:animate-fade-up intersect:animate-duration[5000ms]"
+    >
       <div class="w-80 lg:w-110">
         <img src="/graphicelements/compressed_polaroid_note.webp" alt="" />
       </div>
@@ -158,13 +164,15 @@ import Heading from "../components/Heading.astro";
             Business Academy Copenhagen. At least so far.</Text
           >
         </div>
-        <div
-          class="w-40 ml-10 mt-5 border-2 rounded-full lg:ml-47 lg:relative lg:-mt-3
-         border-[var(--color-main)] hover:border-[var(--color-deep-red)]
-         transition-colors duration-300 ease-in-out"
-        >
-          <img src="/graphicelements/eklogo_resultat.webp" alt="" />
-        </div>
+        <a href="https://www.ek.dk" target="_blank" rel="noopener noreferrer">
+          <div
+            class="w-40 ml-10 mt-5 border-2 rounded-full lg:ml-47 lg:relative lg:-mt-3
+           border-[var(--color-main)] hover:border-[var(--color-deep-red)]
+           transition-colors duration-300 ease-in-out"
+          >
+            <img src="/graphicelements/eklogo_resultat.webp" alt="EK Logo" />
+          </div>
+        </a>
       </div>
     </section>
   </main></MainLayout

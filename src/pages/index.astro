@@ -76,7 +76,7 @@ import Howto from "../components/Howto.astro";
       </article>
 
       <article
-        class="flex flex-col md:flex-row-reverse items-center gap-8 intersect:animate-fade-up intersect:animate-duration[5000ms]"
+        class="mb-20 flex flex-col md:flex-row-reverse items-center gap-8 intersect:animate-fade-up intersect:animate-duration[5000ms]"
       >
         <div class="flex-1 text-left order-2 md:order-1">
           <Text teksttype="brødtekst">
@@ -107,8 +107,11 @@ import Howto from "../components/Howto.astro";
       </article>
     </section>
 
-    <Howto />
-
+    <section
+      class="intersect:animate-fade-up intersect:animate-duration[5000ms]"
+    >
+      <Howto />
+    </section>
     <section
       class="mt-50 bg-[url('/graphicelements/checkered.webp')] bg-cover bg-center bg-no-repeat intersect:animate-fade-up intersect:animate-duration[5000ms]"
     >
