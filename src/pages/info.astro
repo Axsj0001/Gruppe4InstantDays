@@ -5,9 +5,9 @@ import Heading from "../components/Heading.astro";
 ---
 
 <MainLayout title="About us">
-  <main class="container mx-auto p-4 mt-40">
-    <div class="flex flex-col">
-      <div class="order-2 lg:order-1 w-full">
+  <main class="container p-4 mt-40">
+    <section class="flex flex-col">
+      <article class="order-2 lg:order-1 w-full">
         <div class="pt-20 absolute left-0">
           <img src="/graphicelements/whoareweline_resultat.webp" alt="" />
         </div>
@@ -28,22 +28,24 @@ import Heading from "../components/Heading.astro";
             <img src="/img/Group 23_resultat.webp" alt="billede af lærer 2" />
           </div>
         </div>
-        <div class="absolute hidden lg:flex lg:ml-150 lg:mt-160 lg:pr-20">
+        <div class="absolute hidden xl:flex xl:ml-150 xl:mt-160 xl:pr-20">
           <img src="/graphicelements/thejudgesline_resultat.webp" alt="" />
         </div>
-      </div>
+      </article>
 
-      <div class="order-1 lg:order-2 w-full">
-        <div class="absolute w-125 left-0 lg:w-300">
+      <article class="order-1 lg:order-2 w-full">
+        <div class="absolute w-130 left-0 lg:w-300">
           <img src="/img/rm434-007-removebg-preview 1_resultat.webp" alt="" />
         </div>
-        <div class="relative text-center pr-15 mt-7 lg:text-left lg:mt-35">
-          <div class="pl-10 lg:pl-0">
+        <div class="relative pr-15 mt-7 lg:text-left lg:mt-35">
+          <div class="pl-5 mt-15 lg:mt-0">
             <Heading htmlheading="h1" size="large" font="display" color="red"
               >Who are we</Heading
             >
           </div>
-          <div class="pr-10 pl-20 lg:pl-0 lg:pr-130">
+          <div
+            class="mb-10 pr-10 pl-5 lg:pr-50 xl:pr-120 max-w-130 lg:max-w-280"
+          >
             <Text teksttype="maintext"
               >Instant Day is a small project run by a couple of lecturers from
               the Multimedia Design programme at EK - Business Academy
@@ -55,11 +57,11 @@ import Heading from "../components/Heading.astro";
             >
           </div>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
 
-    <div
-      class="flex flex-row gap-2 items-center row-span-1 self-center w-full justify-center lg:pl-90 lg:mt-55"
+    <section
+      class="flex flex-row gap-2 items-center row-span-1 self-center w-full justify-center mt-60 xl:pl-90 xl:mt-55"
     >
       <div class="">
         <Heading htmlheading="h1" size="large" font="display" color="red"
@@ -68,20 +70,20 @@ import Heading from "../components/Heading.astro";
       </div>
       <div>
         <img
-          class="w-20 lg:absolute lg:w-50 lg:-mt-35"
+          class="w-20 xl:absolute xl:w-50 xl:-mt-35"
           src="/graphicelements/ligthbulb_resultat.webp"
           alt="Lightbulb"
         />
       </div>
-    </div>
+    </section>
     <div
-      class="flex flex-row gap-2 items-center row-span-1 self-center w-full justify-center mt-5 lg:pl-120"
+      class="flex flex-row gap-2 items-center row-span-1 self-center w-full justify-center mt-5 xl:pl-120"
     >
       <Text teksttype="maintext">Submissions will be reviewed by:</Text>
     </div>
 
-    <div class="pl-15 pr-15 lg:pl-150 lg:pr-30 lg:ml-20">
-      <div class="flex flex-col items-center lg:items-start mt-10 space-y-6">
+    <div class="pl-15 pr-15 mb-30 lg:pr-40 xl:pl-150 xl:pr-30 xl:ml-20">
+      <div class="flex flex-col items-start mt-10 space-y-6">
         <div class="flex items-center gap-3">
           <img
             class="w-10"
@@ -139,7 +141,7 @@ import Heading from "../components/Heading.astro";
       </div>
     </div>
 
-    <div class="relative ml-20 mt-10 lg:ml-1">
+    <section class="relative left-20 ml-0 mt-10 mb-30 lg:ml-1">
       <div class="w-80 lg:w-110">
         <img src="/graphicelements/compressed_polaroid_note.webp" alt="" />
       </div>
@@ -157,12 +159,13 @@ import Heading from "../components/Heading.astro";
           >
         </div>
         <div
-          class="w-40 ml-10 mt-5 border-2 rounded-full lg:ml-47 lg:relative lg:-mt-3"
-          style=" --tw-border-opacity: 1; border-color: var(--color-main);"
+          class="w-40 ml-10 mt-5 border-2 rounded-full lg:ml-47 lg:relative lg:-mt-3
+         border-[var(--color-main)] hover:border-[var(--color-deep-red)]
+         transition-colors duration-300 ease-in-out"
         >
           <img src="/graphicelements/eklogo_resultat.webp" alt="" />
         </div>
       </div>
-    </div>
+    </section>
   </main></MainLayout
 >
