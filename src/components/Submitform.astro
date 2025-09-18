@@ -1,94 +1,137 @@
 ---
-import Heading from './Heading.astro';
-import Text from './Text.astro';
-import Button from './Button.astro';
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+import Button from "./Button.astro";
 ---
+
 <section class="relative max-w-xl mx-auto">
- 
-  <img 
-    src="/img/paperupload2_resultat.webp" 
+  <img
+    src="/img/paperupload2_resultat.webp"
     alt="background paper"
     class="w-full h-auto intersect:animate-fade-up intersect:animate-duration[5000ms]"
   />
 
-  
-  <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center p-8 ">
-    <form 
-      class="p-6 w-full space-y-6"
-      method="get"
-      action="/thankyou"
-    >
-
-
-  <Heading 
-    htmlheading="h1" 
-    size="large" 
-    weight="bold" 
-    font="display" 
-    color="red"
-    class="text-center"
+  <div
+    class="absolute top-0 left-0 w-full h-full flex items-center justify-center p-8"
   >
-    Submit your instance
-  </Heading>
+    <form class="p-6 w-full space-y-6" method="get">
+      <Heading
+        htmlheading="h1"
+        size="large"
+        weight="bold"
+        font="display"
+        color="red"
+        class="text-center"
+      >
+        Submit your instance
+      </Heading>
 
+      <div class="flex flex-col">
+        <Heading
+          htmlheading="h3"
+          size="small"
+          weight="bold"
+          color="black"
+          class="mb-1"
+        >
+          Full Name
+        </Heading>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          class="border-b-2 border-[var(--color-red)] outline-none py-2 px-3"
+          required
+        />
+      </div>
 
-  <div class="flex flex-col">
-    <Heading htmlheading="h3" size="small" weight="bold" color="black" class="mb-1">
-      Full Name
-    </Heading>
-    <input type="text" id="fullName" name="fullName" class="border-b-2  border-[var(--color-red)] outline-none py-2 px-3" required />
+      <div class="flex flex-col">
+        <Heading
+          htmlheading="h3"
+          size="small"
+          weight="bold"
+          color="black"
+          class="mb-1"
+        >
+          E-mail
+        </Heading>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="border-b-2 border-[var(--color-red)] outline-none py-2 px-3"
+          required
+        />
+      </div>
+
+      <div class="flex flex-col">
+        <Heading
+          htmlheading="h3"
+          size="small"
+          weight="bold"
+          color="black"
+          class="mb-1"
+        >
+          Submission title
+        </Heading>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          class="border-b-2 border-[var(--color-red)] outline-none py-2 px-3"
+          required
+        />
+      </div>
+
+      <div class="flex flex-col">
+        <Heading
+          htmlheading="h3"
+          size="small"
+          weight="bold"
+          color="black"
+          class="mb-1"
+        >
+          Submission description
+        </Heading>
+        <textarea
+          id="description"
+          name="description"
+          rows="4"
+          placeholder="Describe your submission..."
+          class="border-b-2 border-[var(--color-red)] outline-none py-2 px-3"
+          required></textarea>
+      </div>
+
+      <div class="flex flex-col">
+        <Heading
+          htmlheading="h3"
+          size="small"
+          weight="bold"
+          color="black"
+          class="mb-2"
+        >
+          Upload image
+        </Heading>
+
+        <div
+          class="flex flex-col items-center justify-center border-2 border-dashed border-[var(--color-red)] p-8 cursor-pointer bg-white"
+        >
+          <span class="text-gray-500 mb-2">Click or drag your image here</span>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-2">
+        <input type="checkbox" id="terms" name="terms" required />
+        <Text teksttype="maintext" weight="regular">
+          I agree to the terms and conditions
+        </Text>
+      </div>
+
+      <div class="flex justify-center">
+        <Button href="/thankyou" variant="primary" size="medium" type="submit">
+          Submit
+        </Button>
+      </div>
+    </form>
   </div>
-
- 
-  <div class="flex flex-col">
-    <Heading htmlheading="h3" size="small" weight="bold" color="black" class="mb-1">
-      E-mail
-    </Heading>
-    <input type="email" id="email" name="email" class="border-b-2 border-[var(--color-red)] outline-none py-2 px-3" required />
-  </div>
-
-  <div class="flex flex-col">
-    <Heading htmlheading="h3" size="small" weight="bold" color="black" class="mb-1">
-      Submission title
-    </Heading>
-    <input type="text" id="title" name="title" class="border-b-2 border-[var(--color-red)] outline-none py-2 px-3" required />
-  </div>
-
-  <div class="flex flex-col">
-    <Heading htmlheading="h3" size="small" weight="bold" color="black" class="mb-1">
-      Submission description
-    </Heading>
-    <textarea id="description" name="description" rows="4" placeholder="Describe your submission..." class="border-b-2  border-[var(--color-red)] outline-none py-2 px-3" required></textarea>
-  </div>
-
-  
-  <div class="flex flex-col">
-  <Heading htmlheading="h3" size="small" weight="bold" color="black" class="mb-2">
-    Upload image
-  </Heading>
-
-  <div 
-    class="flex flex-col items-center justify-center border-2 border-dashed border-[var(--color-red)] p-8 cursor-pointer bg-white"
-  >
-    <span class="text-gray-500 mb-2">Click or drag your image here</span>
-    
-  </div>
-</div>
-
-  
-  <div class="flex items-center space-x-2">
-    <input type="checkbox" id="terms" name="terms" required />
-    <Text teksttype="maintext" weight="regular">
-      I agree to the terms and conditions
-    </Text>
-  </div>
-
-    
-  <div class="flex justify-center">
-    <Button variant="primary" size="medium" type="submit">
-      Submit
-    </Button>
-  </div>
-
-</form>
 </section>
