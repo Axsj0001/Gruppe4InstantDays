@@ -2,6 +2,7 @@
 import Heading from "./Heading.astro";
 import Text from "./Text.astro";
 import Button from "./Button.astro";
+import Link from "./Link.astro";
 ---
 
 <section class="container mx-0 bg-gray-50 mb-8 py-12 px-4 md:py-20">
@@ -10,8 +11,8 @@ import Button from "./Button.astro";
   >
     <!-- Headline -->
     <Heading
-      htmlheading="h1"
-      size="large"
+      htmlheading="h2"
+      size="medium"
       weight="bold"
       font="display"
       color="red"
@@ -85,8 +86,9 @@ import Button from "./Button.astro";
         class="w-full h-full flex flex-col absolute justify-center items-center text-center px-25 md:px-50 md:top-4 md:right-20 md:text-left lg:px-50"
       >
         <Text teksttype="maintext" class="">
-          Upload your photo and credentials on LINK.
+          Upload your photo and credentials on <br><a href="/submit" class="underline">submit page.</a>
         </Text>
+       
       </div>
       <img
         src="/graphicelements/uploadcontact_resultat.webp"
@@ -122,7 +124,7 @@ import Button from "./Button.astro";
         class="w-full h-full flex flex-col absolute justify-center items-center text-center px-15 md:top-4 md:right-0 md:text-left lg:px-20 lg:top-20 lg:-right-10"
       >
         <Text teksttype="maintext" class="">
-          Agree to our terms and conditions LINK. <br /><br />
+          <a href="/submit#termsandconditions" class="underline">Agree to our terms and conditions here.</a> <br>
           The short version: Participants have to be 18+, portrayed persons must
           have given consent, and you agree that your instant can be exhibited and
           used to promote the photo contest.
